@@ -1,12 +1,12 @@
 import styled from 'styled-components';
+import { darken } from 'polished'
 
 export const Container = styled.li`
-  height: 100px;
+  height: 150px;
   max-height: 200px;
-  margin-bottom: 20px;
-  background: #FFF;
-  border-top: 1px solid #eee;
-  border-radius: 4px;
+  margin-bottom: 2px;
+  background: #111;
+  border-top: 1px solid #111;
   
 `;
 
@@ -18,11 +18,11 @@ export const Header = styled.header`
 `;
 
 export const Author = styled.strong`
-  color: #333;
+  color: #DDD;
 `;
 
 export const CurrentDate = styled.h2`
-  color: #333;
+  color: #CCC;
   font-size: 14px;
   font-weight: 100;
 
@@ -33,6 +33,7 @@ export const Content= styled.div`
   height: calc(100% - 70px);
   padding-left: 15px;
   align-items: center;
+  color: #AAA;
 `;
 
 export const ContentPost = styled.p`
@@ -56,11 +57,25 @@ export const Like = styled.button`
   color: #697882;
   cursor: pointer;
 
-  :hover {
-    opacity: 0.7;
+  svg{
+    transition: 0.2s color;
+    :hover {
+      color: #eb254b !important;
+    }
   }
 
-  img {
+  svg {
     margin-right: 5px;
   }
+`;
+
+export const LikeNumber  = styled.h2`
+  font-size: 14px;
+  color: #697882;
+
+  :hover {
+    color: ${darken(0.03, '#697882')};
+  }
+
+
 `;

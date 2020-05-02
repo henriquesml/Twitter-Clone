@@ -1,28 +1,35 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { FaHome, FaBell, FaPaperPlane } from 'react-icons/fa'
 
 import Logo from '../../assets/twitter.svg'
-import { Container, Content, Profile } from './styles';
+import { HeaderMain } from './styles';
 
 export default function Header() {
 
   const profile = useSelector(state => state.user.profile)
 
   return (
-    <Container>
-      <Content>
+    <HeaderMain>
+      <div className="wrapper">
         <nav>
-          Logo
+          <ul>
+            <li><FaHome color="#FFF" size={18}/> Home</li>
+            <li><FaBell color="#FFF" size={18}/> Notificações</li>
+            <li><FaPaperPlane color="#FFF" size={18}/> Mensagens</li>
+          </ul>
         </nav>
-        <aside>
-          <Profile>
-            <Link to="/profile">
-              <img src={"https://api.adorable.io/avatars/50/abott@adorable.png"} alt={profile.name}/>
-            </Link>
-          </Profile>
-        </aside>
-      </Content>
-    </Container>
+
+        <img src={Logo} width="20px" alt="Twitter" />
+
+        <div className="side">
+          <input placeholder="buscar"/>
+          <img src={"https://api.adorable.io/avatars/50/abott@adorable.png"} alt={profile.name}/>
+          <button>Post</button>
+        </div>
+      </div>
+      
+    </HeaderMain>
   );
 }

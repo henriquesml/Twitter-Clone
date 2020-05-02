@@ -5,7 +5,7 @@ import socket from 'socket.io-client';
 
 import Tweet from '../../components/Tweet';
 
-import { Container, Form, Button, Textarea, ListTwitters } from './styles'
+import { Container, Form, Button, Textarea, LastPosts, ListTwitters } from './styles'
 
 export default function TimeLine() {
   const [post, setPost] = useState('')
@@ -72,7 +72,7 @@ export default function TimeLine() {
         </Textarea>
         <Button type="submit" >Enviar</Button>
       </Form>
-
+      <LastPosts>Útimas Postagens</LastPosts>
       <ListTwitters>
         {tweetsList.map(tweet => (
           <Tweet key={tweet.id} tweet={tweet} />

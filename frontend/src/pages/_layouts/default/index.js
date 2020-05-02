@@ -3,17 +3,27 @@ import PropTypes from 'prop-types'
 
 import Header from '../../../components/Header'
 
-import { Wrapper, Scroll, Content } from './styles'
+import { Wrapper, Scroll, Content, Profile, TimeLine, Widgets } from './styles'
 
 export default function DefaultLayout({ children }) {
   return (
     <Wrapper>
       <Header />
-      <Content>
-        <Scroll>
+      <Scroll>
+      <Content className="wrapper">
+        
+        <Profile>
+          <h1>Henrique</h1>
+        </Profile>
+        <TimeLine>
           {children}
-        </Scroll>
+        </TimeLine>
+        <Widgets>
+         <h1>Widgets</h1>
+        </Widgets>
+        
       </Content>
+      </Scroll>
     </Wrapper>
   );
 }

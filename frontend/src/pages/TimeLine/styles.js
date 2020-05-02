@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 600px;
-  margin: 50px auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -14,10 +13,11 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background: #222;
+  background: #111;
   padding: 20px;
   border-radius: 5px;
-  margin: 30px 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
 `;
 
 export const Textarea = styled.textarea`
@@ -38,6 +38,17 @@ export const Button = styled.button`
   background: #4bb0ee;
   color: #FFF;
   font-size: 14px;
+`;
+
+export const LastPosts = styled.h1`
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 15px;
+  font-weight: 200;
+  text-align: center;
+  background: #333;
+  line-height: 25px;
+  border-radius: 4px;
 `;
 
 export const ListTwitters = styled.ul`
