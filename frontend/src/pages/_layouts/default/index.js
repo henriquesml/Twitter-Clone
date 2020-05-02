@@ -19,7 +19,21 @@ export default function DefaultLayout({ children }) {
           {children}
         </TimeLine>
         <Widgets>
-         <h1>Widgets</h1>
+          <div className="topics">
+            <h1>Assuntos do Momento</h1>
+            <div className="posts">
+              <div className="post">
+                <h2>#ForaBolsonaro</h2>
+                <h3>589 mil posts</h3>
+              </div>
+
+              <div className="post">
+                <h2>#MoroTaCerto</h2>
+                <h3>501 mil posts</h3>
+              </div>
+            </div>
+          </div>
+         
         </Widgets>
         
       </Content>
