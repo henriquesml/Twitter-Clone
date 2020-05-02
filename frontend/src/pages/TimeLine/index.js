@@ -3,7 +3,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import api from '../../services/api';
 import socket from 'socket.io-client';
 
-import twitterLogo from '../../assets/twitter.svg';
 import Tweet from '../../components/Tweet';
 
 import { Container, Form, Button, Textarea, ListTwitters } from './styles'
