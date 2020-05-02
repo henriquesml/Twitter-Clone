@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 import api from '../../services/api';
 import socket from 'socket.io-client';
@@ -6,7 +6,7 @@ import socket from 'socket.io-client';
 import twitterLogo from '../../assets/twitter.svg';
 import Tweet from '../../components/Tweet';
 
-import { Container, Form, Textarea, ListTwitters } from './styles'
+import { Container, Form, Button, Textarea, ListTwitters } from './styles'
 
 export default function TimeLine() {
   const [post, setPost] = useState('')
@@ -42,29 +42,40 @@ export default function TimeLine() {
   }, [])
 
   async function handleNewTweet(e) {
-    if (e.keyCode !== 13) return;
+    e.preventDefault()
 
     await api.post('tweets', { content: post, user_id: 1})
 
     setPost('')
   }
 
+  const tweetsList = useMemo(() => {
+    return tweets.map(tweet => ({
+      id: tweet.id,
+      author: tweet.user.name,
+      createdAt: tweet.createdAt,
+      content: tweet.content,
+      likes: tweet.likes
+    }))
+  }, [tweets])
+
   return (
     <Container>
-      <img height={24} src={twitterLogo} alt="GoTwitter" />
-
-      <Form>
+      <Form
+        onSubmit={handleNewTweet}
+      >
         <Textarea
           value={post}
           onChange={e => setPost(e.target.value)}
-          onKeyDown={handleNewTweet}
+          
           placeholder="O que está acontecendo?"
           >
         </Textarea>
+        <Button type="submit" >Enviar</Button>
       </Form>
 
       <ListTwitters>
-        { tweets.map(tweet => (
+        { tweetsList.map(tweet => (
           <Tweet key={tweet.id} tweet={tweet} />
         ))}
       </ListTwitters>

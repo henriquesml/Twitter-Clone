@@ -30,8 +30,7 @@ function Tweet({tweet}) {
   return (
     <Container>
       <Header>
-        <Author>{tweet.user.name} - </Author>
-
+        <Author>{tweet.author} - </Author>
         <CurrentDate>
           {parseTwitterDate(tweet.createdAt)}
         </CurrentDate>
