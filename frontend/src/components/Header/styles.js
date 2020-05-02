@@ -6,7 +6,7 @@ export const HeaderMain = styled.header`
   height:46px;
   position: fixed;
   background: #4bb0ee;
-  box-shadow: 0 1px 1px rgba(0,0,0, 1);
+  box-shadow: 0 1px 1px #DDD;
   z-index: 9999;
 
   .wrapper{

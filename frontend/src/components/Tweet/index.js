@@ -28,7 +28,7 @@ function Tweet({tweet}) {
       </Content>
       <Footer>
         <Like type="button" onClick={(e) => handleLike(tweet.id)}>
-          <FaHeart size={14} color={"#EEE"} />
+          <FaHeart size={14} color={"#AAA"} />
           
         </Like>
         <LikeNumber>{tweet.likes}</LikeNumber>

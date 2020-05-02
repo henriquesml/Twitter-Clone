@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 export const Wrapper = styled.div`
-  background: #222;
+  background: #F1F1F1;
   display: flex;
   flex-direction: column;
 
@@ -24,7 +24,7 @@ export const Content  = styled.div`
 
 export const Profile  = styled.aside`
   width: 260px;
-  border-right: 1px solid #111;
+  border-right: 1px solid #DDD;
   height:100%;
   position: fixed;
 `;
@@ -36,7 +36,7 @@ export const TimeLine  = styled.section`
 
 export const Widgets  = styled.aside`
   width: 260px;
-  border-left: 1px solid #111;
+  border-left: 1px solid #DDD;
   position: fixed;
   margin-left: calc(260px + 50px + 540px);
   height:100%;

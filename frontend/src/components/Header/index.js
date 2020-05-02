@@ -24,7 +24,7 @@ export default function Header() {
         <img src={Logo} width="20px" alt="Twitter" />
 
         <div className="side">
-          <input placeholder="buscar"/>
+          <input placeholder="Buscar..."/>
           <img src={"https://api.adorable.io/avatars/50/abott@adorable.png"} alt={profile.name}/>
           <button>Post</button>
         </div>

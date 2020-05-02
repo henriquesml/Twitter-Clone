@@ -13,11 +13,12 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background: #111;
+  background: #FFF;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 15px;
+  border: 1px solid #DDD;
 `;
 
 export const Textarea = styled.textarea`
@@ -28,6 +29,8 @@ export const Textarea = styled.textarea`
   height: 100px;
   resize: none;
   margin-bottom: 10px;
+  background: #FFF;
+  border: 1px solid #DDD;
 `;
 
 export const Button = styled.button`
@@ -42,11 +45,11 @@ export const Button = styled.button`
 
 export const LastPosts = styled.h1`
   font-size: 14px;
-  color: #999;
+  color: #FFF;
   margin-bottom: 15px;
   font-weight: 200;
   text-align: center;
-  background: #333;
+  background: #4bb0ee;
   line-height: 25px;
   border-radius: 4px;
 `;

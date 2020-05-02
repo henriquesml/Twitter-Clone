@@ -4,10 +4,11 @@ import { darken } from 'polished'
 export const Container = styled.li`
   height: 150px;
   max-height: 200px;
-  margin-bottom: 2px;
-  background: #111;
-  border-top: 1px solid #111;
-  
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background: #FFF;
+  border: 1px solid #DDD;
+
 `;
 
 export const Header = styled.header`
@@ -18,11 +19,11 @@ export const Header = styled.header`
 `;
 
 export const Author = styled.strong`
-  color: #DDD;
+  color: #555;
 `;
 
 export const CurrentDate = styled.h2`
-  color: #CCC;
+  color: #999;
   font-size: 14px;
   font-weight: 100;
 
@@ -31,9 +32,9 @@ export const CurrentDate = styled.h2`
 export const Content= styled.div`
   display: flex;
   height: calc(100% - 70px);
-  padding-left: 15px;
+  padding: 0 15px;
   align-items: center;
-  color: #AAA;
+  color: #333;
 `;
 
 export const ContentPost = styled.p`
@@ -54,7 +55,6 @@ export const Like = styled.button`
 
   display: flex;
   align-items: center;
-  color: #697882;
   cursor: pointer;
 
   svg{
@@ -71,10 +71,10 @@ export const Like = styled.button`
 
 export const LikeNumber  = styled.h2`
   font-size: 14px;
-  color: #697882;
+  color: #999;
 
   :hover {
-    color: ${darken(0.03, '#697882')};
+    color: ${darken(0.03, '#999')};
   }
 
 
