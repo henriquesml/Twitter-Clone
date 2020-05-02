@@ -12,15 +12,14 @@ export default function Header() {
   return (
     <Container>
       <Content>
+        <nav>
+          Logo
+        </nav>
         <aside>
           <Profile>
             <Link to="/profile">
               <img src={"https://api.adorable.io/avatars/50/abott@adorable.png"} alt={profile.name}/>
             </Link>
-            <div>
-              <strong>{profile.name}</strong>
-              <Link to="/profile">Meu perfil</Link>
-            </div>
           </Profile>
         </aside>
       </Content>

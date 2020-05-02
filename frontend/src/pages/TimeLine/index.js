@@ -74,7 +74,7 @@ export default function TimeLine() {
       </Form>
 
       <ListTwitters>
-        { tweetsList.map(tweet => (
+        {tweetsList.map(tweet => (
           <Tweet key={tweet.id} tweet={tweet} />
         ))}
       </ListTwitters>

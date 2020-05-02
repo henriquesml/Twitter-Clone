@@ -1,5 +1,6 @@
 import React from 'react'
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-perfect-scrollbar/dist/css/styles.css'
 import { ToastContainer } from 'react-toastify'
 import { Router } from 'react-router-dom'
 import { PersistGate } from 'redux-persist/integration/react'
