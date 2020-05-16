@@ -13,5 +13,5 @@ export default function parseTwitterDate(tdate) {
   if (diff <= 129600) {return '1 dia atrás';}
   if (diff < 604800) {return Math.round(diff / 86400) + ' dias atrás';}
   if (diff <= 777600) {return 'uma semana atrás';}
-  return 'on ' + systemDate;
+  return 'em ' + systemDate;
 }

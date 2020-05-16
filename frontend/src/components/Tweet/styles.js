@@ -24,7 +24,7 @@ export const Author = styled.strong`
 
 export const CurrentDate = styled.h2`
   color: #999;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 100;
 
 `;
